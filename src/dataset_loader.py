@@ -21,8 +21,11 @@ class LeafDiseaseDataset(Dataset):
         for class_name in CLASS_NAMES:
             class_dir = self.root / class_name
             if not class_dir.exists():
+                print("folder not found")
                 continue
-            for img_path in class_dir.glob("*.jpg"):
+            files = list(class_dir.glob("*"))
+
+            for img_path in class_dir.glob("*"):
                  if img_path.suffix.lower() in [".jpg", ".jpeg", ".png"]:
                     self.samples.append((img_path, CLASS_TO_IDX[class_name]))
 
@@ -36,9 +39,12 @@ class LeafDiseaseDataset(Dataset):
             image = self.transform(image)
         return image, label
 
-train_ds = LeafDiseaseDataset("data/raw", transform=transform)
+train_ds = LeafDiseaseDataset("data/train", transform=transform)
+val_ds= LeafDiseaseDataset("data/val", transform = transform) 
 print("Number of samples:", len(train_ds))
+print("Number of samples:", len(val_ds))
 train_loader = DataLoader(train_ds, batch_size=32, shuffle=True, num_workers=0, pin_memory=False)
+val_loader = DataLoader(val_ds, batch_size=32, shuffle=False, num_workers=0, pin_memory=False)
 
 images, labels = next(iter(train_loader))
 print(images.shape, labels[:5])  # torch.Size([32, 3, 224, 224])
