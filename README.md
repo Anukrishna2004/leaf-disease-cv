@@ -27,3 +27,14 @@ torchvision: 0.27.0+cpu
 
 CUDA available: False
 Tensor device: cpu
+
+## Class Imbalance Summary
+
+Healthy: 1272 training images
+Early Blight: 800 training images
+Late Blight: 1527 training images
+Leaf Mold: 761 training images
+
+Observation:
+The dataset is moderately imbalanced. Late Blight has the highest
+number of samples (1527), while Leaf Mold has the lowest (761).
