@@ -3,12 +3,33 @@
 ## Project Structure
 
 leaf-disease-cv/
+│
 ├── data/
+│   ├── train/
+│   │   ├── Tomato___healthy/
+│   │   ├── Tomato___Early_blight/
+│   │   ├── Tomato___Late_blight/
+│   │   └── Tomato___Leaf_Mold/
+│   │
+│   └── val/
+│       ├── Tomato___healthy/
+│       ├── Tomato___Early_blight/
+│       ├── Tomato___Late_blight/
+│       └── Tomato___Leaf_Mold/
+│
 ├── src/
+│   ├── dataset_loader.py
+│   ├── visualize_batch.py
+│   └── split_dataset.py
+│
 ├── models/
+│
 ├── notebooks/
+│
+├── README.md
 ├── requirements.txt
-└── verify_gpu.py
+├── verify_gpu.py
+└── .gitignore
 
 ## Environment
 
