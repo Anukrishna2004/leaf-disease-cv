@@ -19,14 +19,19 @@ leaf-disease-cv/
 │
 ├── src/
 │   ├── dataset_loader.py
+│   ├── split_dataset.py
 │   ├── visualize_batch.py
-│   └── split_dataset.py
-│
+│   ├── model.py
+│   └── train.py
+|
 ├── models/
+|   └── leaf_cnn_best.pth
+|   └── leaf_cnn_epoch5.pth
 │
-├── notebooks/
 │
 ├── README.md
+├── sample_batch.png
+├── training_plot.png
 ├── requirements.txt
 ├── verify_gpu.py
 └── .gitignore
@@ -66,3 +71,7 @@ CNN trained for 10 epochs.
 Training loss reduced from ~0.85 to ~0.17.
 Validation loss reduced from ~0.48 to ~0.17.
 No significant overfitting observed.
+
+## Output Files
+leaf_cnn_best.pth → trained model checkpoint
+training_plot.png → train vs validation loss graph
