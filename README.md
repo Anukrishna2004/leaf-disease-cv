@@ -59,3 +59,10 @@ Leaf Mold: 761 training images
 Observation:
 The dataset is moderately imbalanced. Late Blight has the highest
 number of samples (1527), while Leaf Mold has the lowest (761).
+
+## Training results
+Training Results
+CNN trained for 10 epochs.
+Training loss reduced from ~0.85 to ~0.17.
+Validation loss reduced from ~0.48 to ~0.17.
+No significant overfitting observed.
