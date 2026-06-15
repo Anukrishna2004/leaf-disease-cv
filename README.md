@@ -74,4 +74,5 @@ No significant overfitting observed.
 
 ## Output Files
 leaf_cnn_best.pth → trained model checkpoint
+
 training_plot.png → train vs validation loss graph

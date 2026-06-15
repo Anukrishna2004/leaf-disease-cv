@@ -43,7 +43,7 @@ train_losses = []
 val_losses = []
 
 best_val = float("inf")
-patience = 3
+patience = 3 
 wait = 0
 best_weights =None
 
@@ -56,7 +56,7 @@ for epoch in range(1, 11):
     print(f"Epoch {epoch}:" f" Train Loss: {train_loss:.4f}" f" Val Loss: {val_loss:.4f}" f" Val Acc: {val_acc*100:.2f}%")
     if val_loss < best_val:
         best_val = val_loss
-        wait = 0
+        wait = 0 
         best_weights = copy.deepcopy(model.state_dict())
        
     else:
