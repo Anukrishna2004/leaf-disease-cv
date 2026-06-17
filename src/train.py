@@ -17,7 +17,7 @@ def train_one_epoch(model, loader, criterion, optimizer, device):
     for images, labels in tqdm(loader, desc="train"):
         images, labels = images.to(device), labels.to(device)
         optimizer.zero_grad()
-        logits = model(images)
+        logits = model(images) # forward pass
         loss = criterion(logits, labels)
         loss.backward()
         optimizer.step()
