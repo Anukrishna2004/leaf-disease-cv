@@ -1,0 +1,10 @@
+                       precision    recall  f1-score   support
+
+     Tomato___healthy       1.00      1.00      1.00       319
+Tomato___Early_blight       0.94      0.94      0.94       200
+ Tomato___Late_blight       0.99      0.96      0.97       382
+   Tomato___Leaf_Mold       0.94      0.99      0.97       191
+
+             accuracy                           0.97      1092
+            macro avg       0.97      0.97      0.97      1092
+         weighted avg       0.97      0.97      0.97      1092
