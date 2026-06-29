@@ -176,7 +176,7 @@ Training Loss Curve
 
 Confusion Matrix
 
-![Confusion Matrix Plot](reports\confusion_matrix.png)
+![Confusion Matrix Plot](reports/confusion_matrix.png)
 
 
 ---
